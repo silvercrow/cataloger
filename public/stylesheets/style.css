@@ -1,0 +1,37 @@
+.container{
+	min-width:700px !important;
+}
+.title{
+	font-size:20px;
+	font-weight:bold;
+}
+.blue{
+	color:blue;
+}
+.red{
+	color:red;
+}
+.branding span{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+}
+.branding{
+	margin-bottom: 10px;
+}
+.imageHolder{
+	width:210px;
+	padding:5px;
+	background-color:#eee;
+}
+.images{
+	width:200px;
+}
+.margin{
+	margin-bottom:20px;
+}
+#submitForm{
+	background-color: #eee;
+	padding: 20px;
+	height:220px;
+}

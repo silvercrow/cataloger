@@ -1,0 +1,35 @@
+extends layout
+
+block content
+   div.container
+      div.row.branding
+         span.blue Catalog
+         span.red r
+      div.row#catalogList 
+          #catalogs
+                -each catalog in catalogs
+                     div.row.margin
+                         div.col-md-3
+                            div.imageHolder
+                               img(src=catalog.url).images
+                         div.col-md-9  
+                            div.row
+                               span=catalog.title
+                            div.row
+                               if(catalog.favorite == false)
+                                  a(id=catalog._id.toHexString() style='cursor:pointer', onclick="markAsFavorite(\'"+catalog._id.toHexString()+"\');") Mark as favorite
+                               else
+                                  span.label.label-danger.fav(value=catalog._id.toHexString()) Favorite item
+      div#form.row     
+           p.title Add an item 
+                  div#submitForm    
+                       form(role="form")
+                          div.form-group
+                              label Title:
+                              input(class="form-control", type="text", name="title", id="title")
+                          div.form-group              
+                              label Image URL:
+                              input(class="form-control" type="text", name="url", id="url")
+                          a(onclick="addAnItem();" class="btn btn-primary pull-right", type="submit") Submit
+
+
